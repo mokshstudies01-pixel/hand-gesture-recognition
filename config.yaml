@@ -1,0 +1,26 @@
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  classes: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","space","delete","nothing"]
+  img_size: 224
+  landmark_dim: 84
+
+model:
+  input_dim: 84
+  hidden_dims: [128, 64]
+  num_classes: 29
+  dropout: 0.3
+  learning_rate: 0.001
+  epochs: 30
+  batch_size: 32
+  model_path: "models/isl_asl_landmark_mlp.h5"
+
+inference:
+  confidence_threshold: 0.7
+  cooldown_frames: 15
+  max_text_length: 100
+
+ui:
+  window_title: "ISL/ASL Translator"
+  show_landmarks: true
+  show_confidence: true
